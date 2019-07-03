@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc -p .",
+    "prestart": "npm run build",
+    "debug": "npm run build && node --inspect-brk dist/src/app.js",
+    "start": "node dist/app.js",
+    "start:watch": "nodemon",
+    "lint": "",
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.2"
+  }
+}
